@@ -100,6 +100,7 @@ static std::string transformRuleToCommon(string_view_array &temp, const std::str
     temp.clear();
     std::string strLine;
     split(temp, input, ',');
+    if (temp[0] == "AND" || temp[0] == "OR" || temp[0] == "NOT") return input + "," + group;
     if(temp.size() < 2)
     {
         strLine = temp[0];
