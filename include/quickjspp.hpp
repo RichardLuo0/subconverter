@@ -470,11 +470,6 @@ struct js_traits<std::variant<Ts...>>
             case JS_TAG_EXCEPTION:
                 break;
 
-            case JS_TAG_BIG_DECIMAL:
-                [[fallthrough]];
-            case JS_TAG_BIG_FLOAT:
-                [[fallthrough]];
-
             case JS_TAG_FLOAT64:
                 [[fallthrough]];
             default: // more than JS_TAG_FLOAT64 (nan boxing)
